@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/*  Follow us  */
+.follow {
+    background-color: #f5f0ff;
+}
+body {
+    font-size: 16px;
+    background-color: #f5f0ff;
+}
+.cont1, .cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 2em;
+line-height: 0.5;
+padding: 1%;
+}
+
+.subcont1 {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.subcont1 h1 {
+    margin-bottom: 0;
+}
+.subcont1 h2 {
+    background-image: linear-gradient(to right, #FF52AF, #9F53FF); /* Gradiente da sinistra a destra */
+    background-clip: text; 
+    color: transparent;
+    font-size: 2em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.cont2 img {
+    padding:1em;
+}
+
+/* contact us  */
+#contact-us {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.gradient-box {
+    background-image: linear-gradient(to right, #FF52AF, #9F53FF);
+   max-width: 70%; /* solo per prova*/
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    margin: 10%;
+}
+
+.gradient-box h1 {
+    font-size: 3.5em;
+    margin-bottom: 0;
+}
+
+.gradient-box p {
+font-size: small;
+padding: 2em;
+margin-left: 5em;
+margin-right: 5em;
+}
+
+.gradient-box input {
+    margin-bottom: 2em;
+}
