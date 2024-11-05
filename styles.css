@@ -1,0 +1,397 @@
+/* Base styles and CSS Variables */
+:root {
+    --bg-primary: #faf5ff;
+    --bg-secondary: #ffffff;
+    --text-primary: #27272a;
+    --text-secondary: #71717a;
+    --accent-color: #e879f9;
+    --accent-gradient: linear-gradient(to right, #e879f9, #c084fc);
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --button-text: #ffffff;
+    --heart-color: #ef4444;
+    --transition-speed: 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --card-bg: #2d2d2d;
+        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    letter-spacing: -0.5px;
+}
+
+.yoga-text {
+    display: inline-block;
+    background: linear-gradient(to right, #FF1493, #a914ff);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transform: rotate(8deg);
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(255, 105, 180, 0.3);
+    position: relative;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--bg-primary);
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color var(--transition-speed);
+}
+
+/* Section Layouts */
+.section {
+    padding: 5% 5%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-content {
+    flex: 1;
+}
+
+/* Images */
+.section-image {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+.list-yoga-image {
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.list-yoga-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 110%;
+    background-color: #e9d1fe;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .list-yoga-image::before {
+        background-color: #4b2d66;
+    }
+}
+
+.list-yoga-image img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.list-yoga-detail {
+    width: 50%;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #FF1493, #a914ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+/* Stats Section */
+.stats {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Health Section */
+.health-section .section-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.health-section .background-petals {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(233, 213, 255, 0.3);
+    clip-path: path('M0,100 C30,90 70,90 100,100 L100,100 L0,100');
+}
+
+/* Cards */
+.health-card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0.8rem 1.2rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: var(--card-shadow);
+}
+
+.heart-icon {
+    color: var(--heart-color);
+    font-size: 1.5rem;
+}
+
+.bpm {
+    color: var(--accent-color);
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    box-shadow: var(--card-shadow);
+}
+
+.badge.video {
+    background: rgba(232, 121, 249, 0.1);
+    color: var(--accent-color);
+}
+
+/* Workout Section */
+.workout-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.workout-info {
+    flex: 1;
+}
+
+.workout-images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.workout-image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.workout-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+/* Video Label for High Quality Video */
+.video-label {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; /* Aligns the label to the right side */
+    display: flex;
+    align-items: center;
+    background-color: #4a0c6b;
+    color: #ff7ad1;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.video-label .icon-heart {
+    font-size: 1.2rem;
+    margin-left: 0.5rem; /* Adjusts spacing between text and icon */
+}
+
+/* Trainer Badge */
+.trainer-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #4a0c6b;
+    color: #ff7ad1;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.trainer-badge::before {
+    content: "🏃"; /* Replace with an appropriate icon */
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Background Overlay */
+.background-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(233, 213, 255, 0.3);
+    clip-path: path('M0,100 C30,90 70,90 100,100 L100,100 L0,100');
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a0c6b;
+    color: #ffffff;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fitness-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h1, h2 {
+        font-size: 3rem;
+    }
+    
+    .section {
+        padding: 4% 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section, .workout-section {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    .workout-images {
+        min-height: 400px;
+        width: 100%;
+    }
+
+    .workout-image {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .list-yoga-image,
+    .list-yoga-detail {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 2rem;
+    }
+    
+    .button {
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
