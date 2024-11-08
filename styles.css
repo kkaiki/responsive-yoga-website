@@ -13,7 +13,7 @@
     --transition-speed: 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: Light) {
     :root {
         --bg-primary: #1a1a1a;
         --bg-secondary: #2d2d2d;
@@ -24,6 +24,19 @@
     }
 }
 
+html:has(#dark-mode-toggle:checked) {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --card-bg: #2d2d2d;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide the actual checkbox */
+.dark-mode-toggle {
+    display: none;
+}
 /* Reset and Global Styles */
 * {
     margin: 0;
@@ -134,7 +147,7 @@ p {
 
 @media (prefers-color-scheme: dark) {
     .list-yoga-image::before {
-        background-color: #4b2d66;
+        background-color: #E5D9FD;
     }
 }
 
@@ -505,6 +518,9 @@ button {
     border-radius: 50%;
     transition: opacity 0.3s ease;
 }
+.menu-icon {
+    display: none;
+}
 
 .copyright {
     color: #cccccc;
@@ -519,6 +535,7 @@ button {
     .section {
         padding: 4% 4%;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -583,7 +600,7 @@ button {
     }
     
     .stats {
-        flex-direction: column;
+        
         gap: 2rem;
     }
 

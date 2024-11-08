@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoga Website</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./mobile.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">Yoga</div>
@@ -14,7 +16,13 @@
             <a href="#">Health</a>
             <a href="#">Routine</a>
             <a href="#">Follow</a>
-            <img src="./images/darkmode.png" alt="dark mode">
+            <input type="checkbox" id="dark-mode-toggle" class="dark-mode-toggle">
+            <label for="dark-mode-toggle">
+                <img src="./images/darkmode.png" alt="dark mode" class="dark-mode-icon">
+            </label>
+            <div class="menu-icon">
+                <img src="./images/Vector (5).png" alt="menu">
+            </div>
         </div>
     </nav>
 
@@ -22,7 +30,9 @@
         <div class="section-content">
             <h1>Choose Your Best <span class="yoga-text">Yoga</span> Teacher</h1>
             <p>Calm your mind and body with the best yoga teachers available, relax your day and stay positive.</p>
-            <a href="#" class="button">Get Started Free →</a>
+            <div class="container">
+                <a href="#" class="button">Get Started Free →</a>
+            </div>
             <div class="stats">
                 <div class="stat-item">
                     <h3>300+</h3>
@@ -41,13 +51,16 @@
 
     <section class="section">
         <div class="section-content">
-            <h2>#01</h2>
-        </div>
-        <div class="list-yoga-image">
-            <img src="./images/list-yoga.png" alt="Yoga pose">
+            <div class="section-l">
+                <h2>#01</h2>
+                <div class="list-yoga-image">
+                    <img src="./images/list-yoga(5).png" alt="Yoga pose">
+                </div>
+            </div>
         </div>
         <div class="list-yoga-detail">
-            <p>Get a list of specific influencers in your niche at your fingertips so you can focus on managing your status.</p>
+            <p>Get a list of specific influencers in your niche at your fingertips so you can focus on managing your
+                status.</p>
         </div>
         <div class="list-yoga-button">
             <a href="#" class="button">Next→</a>
@@ -69,7 +82,8 @@
         </div>
         <div class="section-content">
             <h2>Bring Happiness To Good Health!</h2>
-            <p>If you take care of your good health, take care of your mentality and lead a healthy life with positive thoughts every day.</p>
+            <p>If you take care of your good health, take care of your mentality and lead a healthy life with positive
+                thoughts every day.</p>
             <a href="#" class="button">Let's Start →</a>
         </div>
     </section>
@@ -77,7 +91,8 @@
     <section class="workout-section">
         <div class="workout-info">
             <h2>Anytime, Any Place, Any Workout</h2>
-            <p>Take your routine at any time of your day, with the new videos and with the teachers who will guide you.</p>
+            <p>Take your routine at any time of your day, with the new videos and with the teachers who will guide you.
+            </p>
             <a href="#" class="button">Get Started Free →</a>
         </div>
         <div class="workout-images">
@@ -110,6 +125,7 @@
                 <img src="./images/follow-yoga-2.png" alt="yoga-picture2">
             </div>
         </div>
+
         <div class="cont2">
             <img src="./images/follow-yoga-3.png" alt="yoga-picture3">
             <img src="./images/follow-yoga-4.png" alt="yoga-picture4">
@@ -129,26 +145,26 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section-1">
-               <img src="./images/Yoga.png" alt="yoga">
+                <img src="./images/Yoga.png" alt="yoga">
                 <p>Take care of your health and<br> your mind with the best Yoga<br> classes.</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Address</h3>
                 <p>12345 M/01 501<br>Avenue, Lima Peru</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p>+123 456 7890<br>yoga@email.com</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Office</h3>
                 <p>Monday - Saturday<br>9AM - 10PM</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="social-icons">
                 <a href="#" aria-label="Facebook"><img src="./images/ri_facebook-circle-line.png" alt="fb"></a>
